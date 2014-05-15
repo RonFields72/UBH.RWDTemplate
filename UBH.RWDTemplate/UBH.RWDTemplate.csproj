@@ -105,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\BootstrapMenuUL.txt" />
+    <Content Include="assets\ReadMe.txt" />
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\AspNet.ScriptManager.bootstrap.dll" />
     <Content Include="bin\AspNet.ScriptManager.jQuery.dll" />
