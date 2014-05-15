@@ -1,0 +1,87 @@
+﻿<%@ master language="C#" autoeventwireup="true" codebehind="Site.master.cs" inherits="UBH.RWDTemplate.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head runat="server">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><%: Page.Title %> - My ASP.NET Application</title>
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' type='text/css'>
+        
+        <asp:PlaceHolder runat="server">
+            <%: Scripts.Render("~/bundles/modernizr") %>
+        </asp:PlaceHolder>
+
+        <webopt:bundlereference runat="server" path="~/Content/css" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        
+        <asp:ContentPlaceHolder ID="cphHEAD" runat="server">
+            <!--Addtional HEAD content goes here-->
+        </asp:ContentPlaceHolder>
+    </head>
+    <body>
+        <form runat="server">
+            <asp:ScriptManager runat="server">
+                <Scripts>
+                    <%--Framework Scripts--%>
+                    <asp:ScriptReference Name="MsAjaxBundle" />
+                    <asp:ScriptReference Name="jquery" />
+                    <asp:ScriptReference Name="bootstrap" />
+                    <asp:ScriptReference Name="respond" />
+                    <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                    <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                    <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                    <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                    <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                    <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                    <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                    <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                    <asp:ScriptReference Name="WebFormsBundle" />
+                </Scripts>
+            </asp:ScriptManager>
+
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <asp:Literal ID="litMenuHTML" runat="server"></asp:Literal>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container body-content">
+                <div class="page-header">
+                    <h1>
+                        <img alt="ubhLogo" src="images/icon-ubh-logo-square-30x30.png" />
+                        <small><asp:Literal id="litApplicationName" runat="server" Text='<%$ Resources:Resources, ApplicationName %>'></asp:Literal></small>
+                    </h1>
+                </div>
+                <asp:ContentPlaceHolder ID="cphMainContent" runat="server">
+                    <!--Page content goes here-->
+                </asp:ContentPlaceHolder>
+                <hr />
+            </div>
+            
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <asp:Literal ID="litCopyright" runat="server" EnableViewState="false" Text='<%$ Resources:Resources, FooterCopyright %>'></asp:Literal>
+                        </div>
+                        <div class="col-md-2 small">
+                            <asp:Literal ID="litVersion" runat="server" EnableViewState="false" Text='<%$ Resources:Resources, FooterVersion %>'></asp:Literal>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </form>
+    </body>
+</html>

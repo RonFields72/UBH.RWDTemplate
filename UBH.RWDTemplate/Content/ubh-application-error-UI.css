@@ -1,0 +1,19 @@
+﻿/* CSS styles for error pages
+----------------------------------------------------------*/
+body {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+li {
+    height: 30px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+.jumbotron img {
+    margin-right: 12px;
+}

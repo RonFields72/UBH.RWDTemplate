@@ -1,0 +1,38 @@
+﻿/* Use this CSS file to override or enhance any of the bootstrap styles for UBH
+------------------------------------------------------------------- */
+
+/* EXAMPLE of overriding a button style */
+/* Override base .btn styles */
+/* Apply text and background changes to three key states: default, hover, and active (click). */
+/*.btn-ubh,
+.btn-ubh:hover,
+.btn-ubh:active {
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #007da7;
+}*/
+
+/* Apply custom-colored gradients */
+/* NOTE: be sure to include all the appropriate gradients for various browsers and standards. */
+/*.btn-ubh {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(top, #009ED2 0%, #007DA7 100%);
+  ...
+}*/
+
+/* Set the hover state */
+/* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
+/*.btn-ubh:hover {
+  background-position: 0 -15px;
+}*/
+
+/* The customized button HTML would look like this: */
+/*<button type="button" class="btn btn-ubh">Price House</button>*/
+
+/* Set the text style on the KPI Notifications and Workflows in the Bootstrap navbar*/
+.kpi-label {
+    margin-left: 2px;
+}
+.workflow-label {
+    margin-left: 2px;
+}
