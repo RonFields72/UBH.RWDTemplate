@@ -2,10 +2,9 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="cphMainContent" runat="server">
     <div class="jumbotron">
-        <h1>United-Bilt Homes Responsive Web Template</h1>
+        <h1>Responsive Web Template</h1>
         <p class="lead">
             This is a sample content page using Bootstrap 3.1.1. Bootstrap is a mobile-first responsive framework that easily integrates with ASP.NET.
-             
         </p>
         <p>
             <a href="http://getbootstrap.com/" class="btn btn-primary btn-large">Learn more about Bootstrap</a>
